@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="line_chart_dash_line">#fff001</color>
+    <color name="white">#fff</color>
+    <color name="line_chart_up">#fb4747</color>
+    <color name="line_chart_down">#009900</color>
+    <color name="index_item_down_color">#75b506</color>
+    <color name="line_color">#4cfff001</color>
+    <color name="line_color0">#00fff001</color>
+    <color name="line_color1">#fffff001</color>
+    <color name="number_color">#888888</color>
+    <color name="color_1">#fb4747</color>
+    <color name="color_2">#00de00</color>
+    <color name="color_3">#23afff</color>
+</resources>

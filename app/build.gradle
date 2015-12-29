@@ -10,6 +10,11 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        ndk {
+            moduleName "JNIHelper"
+//            moduleName "luajava"
+        }
     }
     buildTypes {
         release {
@@ -25,5 +30,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     compile project(':linechart')
-    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile project(':androLua')
 }

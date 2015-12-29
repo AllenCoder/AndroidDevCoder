@@ -1,1 +1,3 @@
 include ':app', ':linechart'
+include ':androLua'
+include ':hellojni'

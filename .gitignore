@@ -1,3 +1,4 @@
+/androLua/build
 *.iml
 .gradle
 /local.properties

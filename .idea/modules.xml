@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidDevCoder.iml" filepath="$PROJECT_DIR$/AndroidDevCoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/andfixsample/andfixsample.iml" filepath="$PROJECT_DIR$/andfixsample/andfixsample.iml" />
       <module fileurl="file://$PROJECT_DIR$/androLua/androLua.iml" filepath="$PROJECT_DIR$/androLua/androLua.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/hellojni/hellojni.iml" filepath="$PROJECT_DIR$/hellojni/hellojni.iml" />

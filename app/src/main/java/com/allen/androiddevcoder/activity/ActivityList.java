@@ -36,7 +36,7 @@ public class ActivityList extends AppCompatActivity {
                 final TextView textView = (TextView) view.findViewById(R.id.textView);
                 final CheckBox checkBox1 = (CheckBox) view.findViewById(R.id.checkBox1);
                 final TextView textView1 = (TextView) view.findViewById(R.id.textView1);
-               checkBox.setOnCheckedChangeListener(parent.getOnItemSelectedListener());
+//               checkBox.setOnCheckedChangeListener(parent.getOnItemSelectedListener());
                 view.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {

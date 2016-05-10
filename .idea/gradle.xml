@@ -5,28 +5,6 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/andfixsample" />
-            <option value="$PROJECT_DIR$/androLua" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/hellojni" />
-            <option value="$PROJECT_DIR$/leakhandler" />
-            <option value="$PROJECT_DIR$/linechart" />
-          </set>
-        </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/andfixsample" />
-            <option value="$PROJECT_DIR$/androLua" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/hellojni" />
-            <option value="$PROJECT_DIR$/leakhandler" />
-            <option value="$PROJECT_DIR$/linechart" />
-          </set>
-        </option>
       </GradleProjectSettings>
     </option>
   </component>

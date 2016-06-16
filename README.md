@@ -3,6 +3,30 @@
 2. 支持手势显示当前值
 3. 支持当前的区域颜色渐变
 4. ![演示效果](http://img.blog.csdn.net/20151222175518831)
+> # Get it
+Add it in your root build.gradle at the end of repositories:
+```groovy
+allprojects {
+	repositories {
+		...
+		maven { url "https://jitpack.io" }
+	}
+}
+```
+Add the dependency
+```groovy
+dependencies {
+        compile 'compile 'com.allen.linechart:linechart:0.0.1'
+}
+```
+```
+<dependency>
+  <groupId>com.allen.linechart</groupId>
+  <artifactId>linechart</artifactId>
+  <version>0.0.1</version>
+  <type>pom</type>
+</dependency>
+```
 5.如果ListView中的单个Item的view中存在checkbox，button等view，会导致ListView.setOnItemClickListener无效，
   事件会被子View捕获到，ListView无法捕获处理该事件.
   解决方法：

@@ -2,8 +2,10 @@
 1. linechart 为指数基金走势图表可根据当前走势绘制出想要的图表。
 2. 支持手势显示当前值
 3. 支持当前的区域颜色渐变
-4.
-	<img src="link" alt="http://img.blog.csdn.net/20151222175518831" width="60">
+
+4.演示效果图
+<img src="http://img.blog.csdn.net/20151222175518831" width=300 >
+
 
 	> # Get it
 	Add it in your root build.gradle at the end of repositories:
@@ -21,6 +23,7 @@ dependencies {
         compile 'compile 'com.allen.linechart:linechart:0.0.1'
 }
 ```
+或者  or
 ```
 <dependency>
   <groupId>com.allen.linechart</groupId>
@@ -29,6 +32,7 @@ dependencies {
   <type>pom</type>
 </dependency>
 ```
+
 5.如果ListView中的单个Item的view中存在checkbox，button等view，会导致ListView.setOnItemClickListener无效，
   事件会被子View捕获到，ListView无法捕获处理该事件.
   解决方法：

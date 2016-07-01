@@ -7,7 +7,9 @@
 <img src="http://img.blog.csdn.net/20151222175518831" width=300 >
 
 
-> # Get it
+	> # Get it
+	Add it in your root build.gradle at the end of repositories:
+```groovy
 ```
 Add the dependency
 ```groovy

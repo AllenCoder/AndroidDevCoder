@@ -7,7 +7,7 @@
 <img src="http://img.blog.csdn.net/20151222175518831" width=300 >
 
 
-	> # Get it
+> # Get it
 ```
 Add the dependency
 ```groovy

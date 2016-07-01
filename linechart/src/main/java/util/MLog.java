@@ -12,7 +12,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class MLog {
-    public static Boolean LOG_OUT = false;
+    public static Boolean LOG_OUT = true;
     private static final int LENGTH = 5;
     private static final int V = 0x1;
     private static final int D = 0x2;

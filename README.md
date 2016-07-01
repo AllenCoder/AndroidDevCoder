@@ -5,7 +5,7 @@
 
 4. 演示效果图
 
-<img src="http://7xs9qs.com1.z0.glb.clouddn.com/20151222175518831.gif" width=300 />
+<img src="https://github.com/AllenCoder/AndroidDevCoder/blob/master/gif/linechart.gif" width=300 />
 
 
  Get it

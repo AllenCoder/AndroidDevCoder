@@ -3,11 +3,12 @@
 2. 支持手势显示当前值
 3. 支持当前的区域颜色渐变
 
-4.演示效果图
-<img src="http://img.blog.csdn.net/20151222175518831" width=300 >
+4. 演示效果图
+
+<img src="http://7xs9qs.com1.z0.glb.clouddn.com/20151222175518831.gif" width=300 />
 
 
-	> # Get it
+ Get it
 	Add it in your root build.gradle at the end of repositories:
 ```groovy
 ```

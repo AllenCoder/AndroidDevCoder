@@ -8,7 +8,7 @@
 <img src="https://github.com/AllenCoder/AndroidDevCoder/blob/master/gif/linechart.gif" width=300 />
 
 
- Get it
+
 	Add it in your root build.gradle at the end of repositories:
 ```groovy
 ```

@@ -1,5 +1,5 @@
-<resources >
-    <string name = "app_name" >AndroidDevCoder</string >
-    <string name = "action_settings" >Settings</string >
-    <string name = "title_activity_activity_list" >ActivityList</string >
-</resources >
+<resources>
+    <string name="app_name">AndroidDevCoder</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_list">ActivityList</string>
+</resources>

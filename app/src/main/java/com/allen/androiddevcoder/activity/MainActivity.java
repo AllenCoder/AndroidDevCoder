@@ -1,6 +1,8 @@
 package com.allen.androiddevcoder.activity;
 
 import android.animation.Animator;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
@@ -15,8 +17,12 @@ import com.allen.androiddevcoder.R;
 import com.allen.androiddevcoder.util.WeakRefHander;
 import com.allen.linechart.LineChart;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+
+import util.MLog;
 
 public class MainActivity extends AppCompatActivity implements WeakRefHander.Callback{
     private List<Animator> mAnimators;
@@ -25,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements WeakRefHander.Cal
     private LineChart lineChart;
     private WeakRefHander weakRefHander;
     private static final int HANDLER_MESSAGE_START = 0;
+    private String TAG ="lifeCycle";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +50,112 @@ public class MainActivity extends AppCompatActivity implements WeakRefHander.Cal
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Intent mIntent = new Intent(MainActivity.this, com.allen.androiddevcoder.MainActivity.class);
+                startActivity(mIntent);
             }
         });
         lineChart.setAnimationStatus(mAnimators, LineChart.AnimStatus.START);
         weakRefHander = new WeakRefHander(this);
         weakRefHander.start(HANDLER_MESSAGE_START, 1000 * 2);
+        MLog.d(TAG, "onCreate: ");
+        /**
+         * 1）反射构建 Student 对象
+         */
+        Class studentClass = TestReflect.class;
+        try {
+            Constructor constructor = studentClass.getConstructor(new Class[]{String.class,int.class});
+
+            TestReflect aClass = (TestReflect) constructor.newInstance("ALlen",17);
+            MLog.d(TAG, "onCreate: "+aClass.toString());
+        } catch (NoSuchMethodException e) {
+            MLog.e(TAG, "onCreate: "+e.getLocalizedMessage() );
+        } catch (InstantiationException e) {
+            MLog.e(TAG, "onCreate: "+e.getLocalizedMessage() );
+        } catch (IllegalAccessException e) {
+            MLog.e(TAG, "onCreate: "+e.getLocalizedMessage() );
+        } catch (InvocationTargetException e) {
+            MLog.e(TAG, "onCreate: "+e.getLocalizedMessage() );
+        }
+//        /**
+//         * 2）反射修改私有变量
+//         */
+//        try {
+//            TestReflect testReflect = new TestReflect("Test",18);
+//            MLog.d(TAG, "onCreate:初始值 "+testReflect.getGradle());
+//            Field field = TestReflect.class.getDeclaredField("gradle");
+//            field.setAccessible(true);
+//            field.set(testReflect,250);
+//            MLog.d(TAG, "onCreate: "+testReflect.getGradle());
+//        } catch (NoSuchFieldException e) {
+//            e.printStackTrace();
+//        } catch (IllegalAccessException e) {
+//            e.printStackTrace();
+//        }
+//        /**
+//         * 3）反射调用私有方法
+//         */
+//        try {
+//            TestReflect reflect = new TestReflect("ALlen",225);
+//            Method method  =TestReflect.class.getDeclaredMethod("getSchool",null);
+//            method.setAccessible(true);
+//            method.invoke(reflect,null);
+//        } catch (NoSuchMethodException e) {
+//            e.printStackTrace();
+//        } catch (IllegalAccessException e) {
+//            e.printStackTrace();
+//        } catch (InvocationTargetException e) {
+//            e.printStackTrace();
+//        }
+        Intent intent = getIntent();
+        Uri uri = intent.getData();
+        if (uri!=null){
+            String articleId = uri.getQueryParameter("article");
+            MLog.d(TAG, "onCreate: "+articleId);
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        MLog.d(TAG, "onRestart: ");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MLog.d(TAG, "onStart: ");
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MLog.d(TAG, "onResume: ");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MLog.d(TAG, "onPause: ");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MLog.d(TAG, "onStop: ");
+
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        MLog.d(TAG, "onSaveInstanceState: ");
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        MLog.d(TAG, "onRestoreInstanceState: ");
     }
     /**
      * 找到数值里面的最大值确定绘图区间
@@ -123,15 +231,5 @@ public class MainActivity extends AppCompatActivity implements WeakRefHander.Cal
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-    }
+   
 }

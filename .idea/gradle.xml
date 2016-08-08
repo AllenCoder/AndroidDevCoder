@@ -3,8 +3,9 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="/Applications/gradle/gradle-2.12" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -14,19 +15,11 @@
             <option value="$PROJECT_DIR$/hellojni" />
             <option value="$PROJECT_DIR$/leakhandler" />
             <option value="$PROJECT_DIR$/linechart" />
+            <option value="$PROJECT_DIR$/okhttpsample" />
+            <option value="$PROJECT_DIR$/reactapp" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/andfixsample" />
-            <option value="$PROJECT_DIR$/androLua" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/hellojni" />
-            <option value="$PROJECT_DIR$/leakhandler" />
-            <option value="$PROJECT_DIR$/linechart" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

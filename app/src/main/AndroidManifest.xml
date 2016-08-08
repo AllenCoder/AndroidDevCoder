@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package = "com.allen.androiddevcoder"
-          xmlns:android = "http://schemas.android.com/apk/res/android"
-    >
+<manifest package="com.allen.androiddevcoder"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <application
-        android:allowBackup = "true"
-        android:icon = "@mipmap/ic_launcher"
-        android:label = "@string/app_name"
-        android:theme = "@style/AppTheme"
-        >
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
         <activity
-            android:name = ".activity.Main3Activity"
-            android:label = "@string/app_name"
-            android:theme = "@style/AppTheme.NoActionBar"
-            >
-            <intent-filter >
-                <action android:name = "android.intent.action.MAIN" />
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name = "android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
 
-            </intent-filter >
-        </activity >
-        <activity android:name = ".activity.Activity_JINI" >
-        </activity >
-    </application >
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="jaq" android:host="jap.alibaba.com" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.Activity_JINI">
+        </activity>
+        <activity android:name=".MyReactActivity"/>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <activity android:name=".activity.Main4Activity">
+        </activity>
+        <activity android:name=".LiveActivity"/>
+        <activity android:name=".MainActivity"/>
+    </application>
 
-</manifest >
+</manifest>

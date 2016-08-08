@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.allen.androiddevcoder"
-        minSdkVersion 14
-        targetSdkVersion 23
+        minSdkVersion 16
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
         ndk {
+            abiFilters "armeabi-v7a", "x86"
             moduleName "JNIHelper"
 //            moduleName "luajava"
         }
@@ -32,4 +32,5 @@ dependencies {
     compile project(':linechart')
     compile project(':androLua')
     compile 'com.alipay.euler:andfix:0.3.1@aar'
+    compile "com.facebook.react:react-native:+"
 }

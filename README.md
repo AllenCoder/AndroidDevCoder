@@ -18,7 +18,7 @@
 Add the dependency
 ```groovy
 dependencies {
-        compile 'compile 'com.allen.linechart:linechart:0.0.1'
+        compile 'com.allen.linechart:linechart:0.0.1'
 }
 ```
 或者  or
